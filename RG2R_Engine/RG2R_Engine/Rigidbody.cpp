@@ -18,13 +18,7 @@ void Rigidbody::Update() {
 	velocity = acceleration * RG2R_TimeM->GetDeltaTime();
 	this->GetOwner()->GetComponent<Transform>()
 		->SetPos(this->GetOwner()->GetComponent<Transform>()->GetPos() + velocity);
-}
 
-void Rigidbody::Render() {
-
-}
-
-void Rigidbody::Render(ViewRenderData&) {
 
 }
 

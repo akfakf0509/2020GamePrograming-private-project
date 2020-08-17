@@ -13,8 +13,11 @@ public:
 	~Rigidbody();
 
 	void Update();
-	void Render();
-	void Render(ViewRenderData&);
+	virtual void Render() = 0;
+	virtual void Render(ViewRenderData&) = 0;
+	virtual void OnCollisionEnter() = 0;
+	virtual void OnCollisionStay() = 0;
+	virtual void OnCollisionExit() = 0;
 
 	std::type_index GetID(void) { return typeid(Rigidbody); }
 	static std::type_index GetFamilyID(void) { return typeid(Rigidbody); }

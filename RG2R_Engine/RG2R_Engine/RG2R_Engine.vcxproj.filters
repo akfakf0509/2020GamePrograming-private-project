@@ -148,6 +148,15 @@
     <Filter Include="소스 파일\Engine\Element\Component\Components\Rigidbody">
       <UniqueIdentifier>{534b0273-5fb4-4ed1-94f6-d66b18008e33}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Game\Scenes\Ingame">
+      <UniqueIdentifier>{c9d5eb43-2607-490a-ad2d-b5b790663eba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Game\Objects\Player">
+      <UniqueIdentifier>{bf6f75c2-88cf-4a58-bf49-46e2d77dd9c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Game\Objects\Enemy">
+      <UniqueIdentifier>{59431df1-abfa-46ad-bafd-b228ef29bddf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -279,6 +288,15 @@
     <ClInclude Include="Rigidbody.h">
       <Filter>소스 파일\Engine\Element\Component\Components\Rigidbody</Filter>
     </ClInclude>
+    <ClInclude Include="Ingame.h">
+      <Filter>소스 파일\Game\Scenes\Ingame</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>소스 파일\Game\Objects\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>소스 파일\Game\Objects\Enemy</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RG2R_Engine.rc">
@@ -404,6 +422,15 @@
     </ClCompile>
     <ClCompile Include="Rigidbody.cpp">
       <Filter>소스 파일\Engine\Element\Component\Components\Rigidbody</Filter>
+    </ClCompile>
+    <ClCompile Include="Ingame.cpp">
+      <Filter>소스 파일\Game\Scenes\Ingame</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>소스 파일\Game\Objects\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>소스 파일\Game\Objects\Enemy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

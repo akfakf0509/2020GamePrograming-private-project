@@ -3,11 +3,12 @@
 #include "Scene.h"
 #include "Engine.h"
 #include "SpriteRenderer.h"
+#include "Ingame.h"
 #include <iostream>
 
 Scene* SceneManager::FirstScene()
 {
-	return nullptr;
+	return new Ingame();
 }
 
 SceneManager::SceneManager()
