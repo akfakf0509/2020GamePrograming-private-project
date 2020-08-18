@@ -1,5 +1,8 @@
 #pragma once
 #include "Component.h"
+
+class CollisionInfo;
+
 class Rigidbody :
 	public Component
 {
@@ -8,18 +11,17 @@ private:
 	Vec2F velocity = { 0,0 };
 
 	float calculation_speed = 15;
+
+	bool isFirstCollision = true;
 public:
 	Rigidbody();
 	~Rigidbody();
 
 	void Update();
-	virtual void Render() = 0;
-	virtual void Render(ViewRenderData&) = 0;
-	virtual void OnCollisionEnter() = 0;
-	virtual void OnCollisionStay() = 0;
-	virtual void OnCollisionExit() = 0;
+	void Render();
+	void Render(ViewRenderData&);
 
-	std::type_index GetID(void) { return typeid(Rigidbody); }
+	std::type_index GetID() { return typeid(Rigidbody); }
 	static std::type_index GetFamilyID(void) { return typeid(Rigidbody); }
 
 	Rigidbody* SetForce(Vec2F);

@@ -166,7 +166,6 @@
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
-    <ClInclude Include="CollisionInfo.h" />
     <ClInclude Include="Command.h" />
     <ClInclude Include="CommandList.h" />
     <ClInclude Include="Component.h" />
@@ -204,6 +203,7 @@
     <ClInclude Include="ViewRenderData.h" />
     <ClInclude Include="ViewRenderer.h" />
     <ClInclude Include="WindowManager.h" />
+    <ClInclude Include="CollisionInfo.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AnimationRenderData.cpp" />

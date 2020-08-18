@@ -3,5 +3,12 @@
 class Enemy :
 	public Object
 {
+private:
+public:
+	Enemy();
+	~Enemy();
+
+	void OnUpdate();
+	void OnCollisionStay(CollisionInfo*);
 };
 

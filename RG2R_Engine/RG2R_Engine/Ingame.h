@@ -5,6 +5,8 @@ class Ingame :
 {
 private:
 	Object* background;
+	Object* player;
+	Object* enemy;
 public:
 	Ingame();
 	~Ingame();

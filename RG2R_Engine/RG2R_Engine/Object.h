@@ -20,6 +20,8 @@ enum ObjectState
 	OBJ_DISABLE
 };
 
+class CollisionInfo;
+
 class Object
 {
 public:
@@ -134,9 +136,9 @@ public:
 	// 이벤트 메서드
 	virtual void OnAttachComponent() {} // 컴포넌트가 추가됐을 때
 	virtual void OnDetachComponent() {} // 컴포넌트가 삭제됐을 때
-	virtual void OnCollisionEnter() {} // 충돌했을 때
-	virtual void OnCollisionStay() {} // 충돌중
-	virtual void OnCollisionExit() {} // 충돌이 끝났을 때
+	virtual void OnCollisionEnter(CollisionInfo*) {} // 충돌했을 때
+	virtual void OnCollisionStay(CollisionInfo*) {} // 충돌중
+	virtual void OnCollisionExit(CollisionInfo*) {} // 충돌이 끝났을 때
 	virtual void OnChangeName() {} // 이름 변경
 	virtual void OnChangeTag() {} // 태그 변경
 	virtual void OnChangeParent() {} // 부모 오브젝트 변수가 바뀌었을 떄
@@ -158,9 +160,9 @@ public:
 	// 이벤트 리스너
 	std::function<void()> onAttachComponentListener = NULL;
 	std::function<void()> onDetachComponentListener = NULL;
-	std::function<void()> onCollisionEnterListener = NULL;
-	std::function<void()> onCollisionStayListener = NULL;
-	std::function<void()> onCollisionExitListener = NULL;
+	std::function<void(CollisionInfo*)> onCollisionEnterListener = NULL;
+	std::function<void(CollisionInfo*)> onCollisionStayListener = NULL;
+	std::function<void(CollisionInfo*)> onCollisionExitListener = NULL;
 	std::function<void()> onChangeNameListener = NULL;
 	std::function<void()> onChangeTagListener = NULL;
 	std::function<void()> onChangeParentListener = NULL;
