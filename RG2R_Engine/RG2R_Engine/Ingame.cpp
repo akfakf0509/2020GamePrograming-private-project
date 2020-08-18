@@ -19,6 +19,7 @@ Ingame::Ingame() {
 
 	enemy = new Enemy();
 	AttachObject(enemy);
+	enemy->SetTarget(player);
 }
 
 Ingame::~Ingame() {

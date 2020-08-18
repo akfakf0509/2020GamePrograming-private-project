@@ -3,6 +3,8 @@
 #include "SpriteRenderer.h"
 #include "BoxCollider.h"
 #include "Rigidbody.h"
+#include "Transform.h"
+#include "Player.h"
 
 Enemy::Enemy() {
 	AttachComponent<SpriteRenderer>()
@@ -22,4 +24,8 @@ void Enemy::OnUpdate() {
 
 void Enemy::OnCollisionStay(CollisionInfo* collision) {
 	std::cout << "Collision" << std::endl;
+}
+
+void Enemy::SetTarget(Object* target) {
+	this->target = target;
 }

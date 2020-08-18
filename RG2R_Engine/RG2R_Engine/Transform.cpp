@@ -36,7 +36,7 @@ Vec2F Transform::GetScale()
 	return scale;
 }
 
-float Transform::GetRot()
+float Transform::GetRotation()
 {
 	return rot;
 }

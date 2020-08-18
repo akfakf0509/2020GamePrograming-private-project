@@ -32,7 +32,7 @@ public:
 	Vec2F GetScreenPos();
 	Vec2F GetScale();
 	Vec2F GetAnchor();
-	float GetRot();
+	float GetRotation();
 	bool GetIsRelative();
 
 	Transform* SetPos(Vec2F);
