@@ -163,6 +163,7 @@
     <ClInclude Include="BitmapRenderData.h" />
     <ClInclude Include="BitmapRenderer.h" />
     <ClInclude Include="BoxCollider.h" />
+    <ClInclude Include="Bullet.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CircleCollider.h" />
     <ClInclude Include="Collider.h" />
@@ -180,6 +181,7 @@
     <ClInclude Include="KeyCode.h" />
     <ClInclude Include="Math.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="PistolBullet.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="RandomGenerator.h" />
     <ClInclude Include="Renderer.h" />
@@ -211,6 +213,7 @@
     <ClCompile Include="BitmapRenderData.cpp" />
     <ClCompile Include="BitmapRenderer.cpp" />
     <ClCompile Include="BoxCollider.cpp" />
+    <ClCompile Include="Bullet.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CircleCollider.cpp" />
     <ClCompile Include="Collider.cpp" />
@@ -226,6 +229,7 @@
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Math.cpp" />
     <ClCompile Include="Object.cpp" />
+    <ClCompile Include="PistolBullet.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="RandomGenerator.cpp" />
     <ClCompile Include="Renderer.cpp" />

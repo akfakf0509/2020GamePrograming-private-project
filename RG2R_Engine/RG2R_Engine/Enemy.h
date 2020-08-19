@@ -5,6 +5,8 @@ class Enemy :
 	public Object
 {
 private:
+	int hp;
+
 	Object* target;
 public:
 	Enemy();
@@ -13,6 +15,9 @@ public:
 	void OnUpdate();
 	void OnCollisionStay(CollisionInfo*);
 
-	void SetTarget(Object*);
+	int GetHp();
+
+	Enemy* SetTarget(Object*);
+	Enemy* SetHp(int);
 };
 

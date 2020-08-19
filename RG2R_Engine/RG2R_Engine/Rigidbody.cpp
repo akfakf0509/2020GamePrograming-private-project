@@ -38,10 +38,10 @@ void Rigidbody::Update() {
 			if (iterboxcollider && ownerboxCollider) {
 				bool is_crash = 1;
 
-				Vec2F a1(cos(obj1_transform->GetRot()), sin(obj1_transform->GetRot()));
-				Vec2F a2(-sin(obj1_transform->GetRot()), cos(obj1_transform->GetRot()));
-				Vec2F a3(cos(obj2_transform->GetRot()), sin(obj2_transform->GetRot()));
-				Vec2F a4(-sin(obj2_transform->GetRot()), cos(obj2_transform->GetRot()));
+				Vec2F a1(cos(obj1_transform->GetRotation()), sin(obj1_transform->GetRotation()));
+				Vec2F a2(-sin(obj1_transform->GetRotation()), cos(obj1_transform->GetRotation()));
+				Vec2F a3(cos(obj2_transform->GetRotation()), sin(obj2_transform->GetRotation()));
+				Vec2F a4(-sin(obj2_transform->GetRotation()), cos(obj2_transform->GetRotation()));
 
 				Vec2F l = obj1_transform->GetPos() - obj2_transform->GetPos();
 
@@ -99,8 +99,8 @@ void Rigidbody::Update() {
 			else if (itercirclecollider && ownerboxCollider) {
 				bool is_crash = true;
 
-				Vec2F a1(cos(obj2_transform->GetRot()), sin(obj2_transform->GetRot()));
-				Vec2F a2(-sin(obj2_transform->GetRot()), cos(obj2_transform->GetRot()));
+				Vec2F a1(cos(obj2_transform->GetRotation()), sin(obj2_transform->GetRotation()));
+				Vec2F a2(-sin(obj2_transform->GetRotation()), cos(obj2_transform->GetRotation()));
 
 				Vec2F l = obj1_transform->GetPos() - obj2_transform->GetPos();
 

@@ -41,7 +41,9 @@ public:
 	Transform* SetPos(float, float);
 	Transform* SetScale(float, float);
 	Transform* SetAnchor(float, float);
-	Transform* SetRot(float);
+	Transform* SetRotation(float);
+	Transform* LookAt(Object*);
+	Transform* LookAt(Vec2F);
 	Transform* SetPosX(float);
 	Transform* SetPosY(float);
 	Transform* SetScaleX(float);

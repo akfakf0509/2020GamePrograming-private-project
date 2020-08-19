@@ -384,7 +384,10 @@ inline Vec2F Vec2F::Cross(float s, const Vec2F &a)
 
 inline Vec2F Vec2F::Normalize()
 {
-	return *this / Size();
+	if (Size() != 0)
+		return *this / Size();
+	else
+		return *this;
 }
 
 inline Degree Vec2F::Angle() const

@@ -38,7 +38,7 @@ void Object::Render()
 	matrix =
 		D2D1::Matrix3x2F(isFlipX ? -1 : 1, 0, 0, isFlipY ? -1 : 1, 0, 0) *
 		D2D1::Matrix3x2F::Scale(transform->GetScale().x, transform->GetScale().y) *
-		D2D1::Matrix3x2F::Rotation(transform->GetRot()) *
+		D2D1::Matrix3x2F::Rotation(transform->GetRotation()) *
 		D2D1::Matrix3x2F::Translation(transform->GetPos().x * INCH_PER_DISTANCE, -transform->GetPos().y * INCH_PER_DISTANCE);
 
 	noCameraMatrix = matrix;
@@ -108,7 +108,7 @@ void Object::Render(ViewRenderData& viewRenderData)
 	matrix_v =
 		D2D1::Matrix3x2F(isFlipX ? -1 : 1, 0, 0, isFlipY ? -1 : 1, 0, 0) *
 		D2D1::Matrix3x2F::Scale(transform->GetScale().x, transform->GetScale().y) *
-		D2D1::Matrix3x2F::Rotation(transform->GetRot()) *
+		D2D1::Matrix3x2F::Rotation(transform->GetRotation()) *
 		D2D1::Matrix3x2F::Translation(transform->GetPos().x * INCH_PER_DISTANCE, -transform->GetPos().y * INCH_PER_DISTANCE);
 
 	anchor_matrix_v = D2D1::Matrix3x2F::Translation(-transform->GetAnchor().x, -transform->GetAnchor().y) *

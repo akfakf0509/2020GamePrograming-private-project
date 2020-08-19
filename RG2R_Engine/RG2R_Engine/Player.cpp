@@ -7,6 +7,8 @@
 #include "Transform.h"
 
 Player::Player() {
+	GetComponent<Transform>()
+		->SetAnchor(16, 16);
 	AttachComponent<SpriteRenderer>()
 		->SetTexture("Resources/Sprites/Player.png");
 	AttachComponent<BoxCollider>()
@@ -19,22 +21,26 @@ Player::~Player() {
 }
 
 void Player::OnUpdate() {
+	Vec2F movement(0,0);
+
 	if (RG2R_InputM->GetKeyState(KeyCode::KEY_W) == KEYSTATE_STAY) {
-		GetComponent<Transform>()
-			->SetPos(GetComponent<Transform>()->GetPos() + Vec2F(0, 0.01f));
+		movement.y += 1;
 	}
 	if (RG2R_InputM->GetKeyState(KeyCode::KEY_S) == KEYSTATE_STAY) {
-		GetComponent<Transform>()
-			->SetPos(GetComponent<Transform>()->GetPos() + Vec2F(0, -0.01f));
+		movement.y -= 1;
 	}
 	if (RG2R_InputM->GetKeyState(KeyCode::KEY_A) == KEYSTATE_STAY) {
-		GetComponent<Transform>()
-			->SetPos(GetComponent<Transform>()->GetPos() + Vec2F(-0.01f, 0));
+		movement.x -= 1;
 	}
 	if (RG2R_InputM->GetKeyState(KeyCode::KEY_D) == KEYSTATE_STAY) {
-		GetComponent<Transform>()
-			->SetPos(GetComponent<Transform>()->GetPos() + Vec2F(0.01f, 0));
+		movement.x += 1;
 	}
+
+	movement = movement.Normalize();
+
+	GetComponent<Transform>()
+		->Translate(movement * 0.02f)
+		->LookAt(RG2R_InputM->FromUIToWorld(RG2R_InputM->GetMousePos()));
 }
 
 void Player::OnCollisionStay(CollisionInfo* collision) {

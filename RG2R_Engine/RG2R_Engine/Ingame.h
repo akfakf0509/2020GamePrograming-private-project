@@ -14,4 +14,6 @@ private:
 public:
 	Ingame();
 	~Ingame();
+
+	void OnUpdate();
 };

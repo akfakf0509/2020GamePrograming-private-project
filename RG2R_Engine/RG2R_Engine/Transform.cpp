@@ -78,9 +78,28 @@ Transform* Transform::SetScale(float x, float y)
 }
 
 
-Transform* Transform::SetRot(float rot)
+Transform* Transform::SetRotation(float rot)
 {
 	this->rot = rot;
+
+	return this;
+}
+
+Transform* Transform::LookAt(Object *obj)
+{
+	Vec2F pos1 = GetOwner()->GetComponent<Transform>()->GetPos();
+	Vec2F pos2 = obj->GetComponent<Transform>()->GetPos();
+
+	rot = atan2((pos1.x - pos2.x), (pos1.y - pos2.y)) * 180.0f / PI;
+
+	return this;
+}
+
+Transform* Transform::LookAt(Vec2F pos2)
+{
+	Vec2F pos1 = GetOwner()->GetComponent<Transform>()->GetPos();
+
+	rot = atan2((pos1.x - pos2.x), (pos1.y - pos2.y)) * 180.0f / PI;
 
 	return this;
 }

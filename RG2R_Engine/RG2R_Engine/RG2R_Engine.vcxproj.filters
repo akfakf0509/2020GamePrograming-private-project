@@ -157,6 +157,12 @@
     <Filter Include="소스 파일\Engine\Element\Component\Components\Transform">
       <UniqueIdentifier>{d22ca49a-74c4-4889-b51d-9302afa650f4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Game\Objects\Bullet">
+      <UniqueIdentifier>{5f221456-f501-4301-9a9f-c7f8b7100905}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Game\Objects\Bullet\PistolBullet">
+      <UniqueIdentifier>{1f3dbc79-8a6a-4ce5-a559-5d8842074cb8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -297,6 +303,12 @@
     <ClInclude Include="CollisionInfo.h">
       <Filter>소스 파일\Engine\Element\Component\Components\Rigidbody</Filter>
     </ClInclude>
+    <ClInclude Include="Bullet.h">
+      <Filter>소스 파일\Game\Objects\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="PistolBullet.h">
+      <Filter>소스 파일\Game\Objects\Bullet\PistolBullet</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="RG2R_Engine.rc">
@@ -431,6 +443,12 @@
     </ClCompile>
     <ClCompile Include="Enemy.cpp">
       <Filter>소스 파일\Game\Objects\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Bullet.cpp">
+      <Filter>소스 파일\Game\Objects\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="PistolBullet.cpp">
+      <Filter>소스 파일\Game\Objects\Bullet\PistolBullet</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

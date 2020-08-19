@@ -24,3 +24,7 @@ Ingame::Ingame() {
 
 Ingame::~Ingame() {
 }
+
+void Ingame::OnUpdate() {
+	enemy->GetComponent<Transform>()->LookAt(player);
+}
