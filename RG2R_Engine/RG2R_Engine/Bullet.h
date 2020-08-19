@@ -4,17 +4,18 @@ class Bullet :
 	public Object
 {
 private:
+	float speed;
 	int damage;
+	Vec2F direction;
 public:
 	Bullet();
 	~Bullet();
 
-	virtual void Update() = 0;
-	virtual void Render() = 0;
-	virtual void Render(ViewRenderData&) = 0;
+	float GetSpeed();
+	int GetDamage();
+	Vec2F GetDirection();
 
-	virtual std::type_index GetID() { return typeid(Bullet); }
-	static std::type_index GetFamilyID(void) { return typeid(Bullet); }
-
-	   
+	Bullet* SetSpeed(float);
+	Bullet* SetDameage(int);
+	Bullet* SetDirection(Vec2F);
 };

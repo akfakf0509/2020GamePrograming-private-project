@@ -12,9 +12,6 @@
     <Filter Include="소스 파일\Engine">
       <UniqueIdentifier>{90876bf1-9da1-4cb0-86ca-c2d9b374adfe}</UniqueIdentifier>
     </Filter>
-    <Filter Include="소스 파일\Engine\Engine">
-      <UniqueIdentifier>{e94ffb7f-bae0-493a-aa27-4cdc40c91b6c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="소스 파일\Engine\Main">
       <UniqueIdentifier>{bcbca77d-f5e8-47e3-9527-f8cc19330b72}</UniqueIdentifier>
     </Filter>
@@ -26,9 +23,6 @@
     </Filter>
     <Filter Include="소스 파일\Engine\System\TimeManager">
       <UniqueIdentifier>{d6c7cde9-58f7-48bf-bf10-d71fac947732}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="소스 파일\Engine\System\SoundManager">
-      <UniqueIdentifier>{791bf135-b9bd-4683-bc28-9e8727e71fc7}</UniqueIdentifier>
     </Filter>
     <Filter Include="소스 파일\Engine\System\GraphicManager">
       <UniqueIdentifier>{777147a8-bdf3-4f6c-9b41-c313a19f1b58}</UniqueIdentifier>
@@ -163,6 +157,12 @@
     <Filter Include="소스 파일\Game\Objects\Bullet\PistolBullet">
       <UniqueIdentifier>{1f3dbc79-8a6a-4ce5-a559-5d8842074cb8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="소스 파일\Engine\Element\Scene\Engine">
+      <UniqueIdentifier>{e94ffb7f-bae0-493a-aa27-4cdc40c91b6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Engine\System\SceneManager\SoundManager">
+      <UniqueIdentifier>{791bf135-b9bd-4683-bc28-9e8727e71fc7}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="targetver.h">
@@ -175,7 +175,7 @@
       <Filter>소스 파일\Engine\Utils\stdafx</Filter>
     </ClInclude>
     <ClInclude Include="Engine.h">
-      <Filter>소스 파일\Engine\Engine</Filter>
+      <Filter>소스 파일\Engine\Element\Scene\Engine</Filter>
     </ClInclude>
     <ClInclude Include="GraphicManager.h">
       <Filter>소스 파일\Engine\System\GraphicManager</Filter>
@@ -196,7 +196,7 @@
       <Filter>소스 파일\Engine\System\TextureManager\Texture</Filter>
     </ClInclude>
     <ClInclude Include="SoundManager.h">
-      <Filter>소스 파일\Engine\System\SoundManager</Filter>
+      <Filter>소스 파일\Engine\System\SceneManager\SoundManager</Filter>
     </ClInclude>
     <ClInclude Include="TimeManager.h">
       <Filter>소스 파일\Engine\System\TimeManager</Filter>
@@ -331,7 +331,7 @@
       <Filter>소스 파일\Engine\Main</Filter>
     </ClCompile>
     <ClCompile Include="Engine.cpp">
-      <Filter>소스 파일\Engine\Engine</Filter>
+      <Filter>소스 파일\Engine\Element\Scene\Engine</Filter>
     </ClCompile>
     <ClCompile Include="GraphicManager.cpp">
       <Filter>소스 파일\Engine\System\GraphicManager</Filter>
@@ -346,7 +346,7 @@
       <Filter>소스 파일\Engine\System\TextureManager\Texture</Filter>
     </ClCompile>
     <ClCompile Include="SoundManager.cpp">
-      <Filter>소스 파일\Engine\System\SoundManager</Filter>
+      <Filter>소스 파일\Engine\System\SceneManager\SoundManager</Filter>
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
       <Filter>소스 파일\Engine\System\TimeManager</Filter>

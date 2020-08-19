@@ -4,6 +4,9 @@
 #include "Transform.h"
 #include "Player.h"
 #include "Enemy.h"
+#include "Engine.h"
+#include "PistolBullet.h"
+#include "RandomGenerator.h"
 
 Ingame::Ingame() {
 	background = CreateObject();
@@ -16,15 +19,51 @@ Ingame::Ingame() {
 
 	player = new Player();
 	AttachObject(player);
-
-	enemy = new Enemy();
-	AttachObject(enemy);
-	enemy->SetTarget(player);
 }
 
 Ingame::~Ingame() {
 }
 
 void Ingame::OnUpdate() {
-	enemy->GetComponent<Transform>()->LookAt(player);
+	if (RG2R_InputM->GetMouseState(MouseCode::MOUSE_LBUTTON) == KeyState::KEYSTATE_ENTER) {
+		player->Shoot();
+	}
+
+	for (auto enemy : enemys) {
+		enemy->GetComponent<Transform>()->LookAt(player);
+	}
+
+	auto random = new RandomGenerator();
+
+	if (random->GetInt(0, 100) == 0) {
+		SpawnEnemy();
+	}
+}
+
+Ingame* Ingame::SpawnEnemy() {
+	auto random = new RandomGenerator();
+
+	auto new_enemy = new Enemy();
+	new_enemy->SetTarget(player);
+	enemys.push_back(new_enemy);
+	AttachObject(new_enemy);
+
+	switch (random->GetInt(0, 3))
+	{
+	case 0:
+		new_enemy->GetComponent<Transform>()->SetPos(6, 3);
+		break;
+	case 1:
+		new_enemy->GetComponent<Transform>()->SetPos(-6, -3);
+		break;
+	case 2:
+		new_enemy->GetComponent<Transform>()->SetPos(6, -3);
+		break;
+	case 3:
+		new_enemy->GetComponent<Transform>()->SetPos(-6, 3);
+	default:
+		break;
+	}
+
+	return this;
 }

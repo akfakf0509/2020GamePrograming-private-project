@@ -10,5 +10,7 @@ public:
 
 	void OnUpdate();
 	void OnCollisionStay(CollisionInfo*);
+
+	Player* Shoot();
 };
 
